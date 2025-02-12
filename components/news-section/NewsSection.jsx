@@ -1,25 +1,10 @@
-import Image from "next/image";
-import Navbar from "../header/Navbar";
+import React from 'react'
 
-export default function NewsPage() {
+function NewsSection() {
   return (
-    <div className="h-[100vh] w-[1213px] mx-auto">
-         <Navbar />
-      <main>
-        <div className="bg-black text-white p-4 rounded-lg text-sm">
-          <span className="text-red-500 font-bold">● LIVE UPDATES </span>
-          <span className="font-bold">
-            UN SAYS 700,000 CHILDREN DISPLACED IN GAZA AMID DEADLY ISRAEL
-            ATTACKS
-          </span>
-          <p className="text-gray-300 text-xs mt-1">
-            UNICEF says children ‘forced to leave everything behind’ as Israeli
-            bombings continue across the besieged enclave.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4 mt-6">
+    <div className="grid md:grid-cols-2 gap-4 mt-6">
           <div className="rounded-lg overflow-hidden shadow-md">
-            <Image src="/image.png" width={600} height={400} alt="Gaza Image" />
+            {/* <Image src="/image.png" width={600} height={400} alt="Gaza Image" /> */}
             <p className="text-xs p-2 bg-gray-800 text-white">ISRAEL/GAZA</p>
           </div>
           <div className="bg-white p-4 shadow-md rounded-lg">
@@ -60,7 +45,7 @@ export default function NewsPage() {
             </ul>
           </div>
         </div>
-      </main>
-    </div>
-  );
+  )
 }
+
+export default NewsSection

@@ -2,12 +2,11 @@ import React from "react";
 
 function Navbar() {
   return (
-    <header className="flex items-center justify-between py-4">
+    <header className="flex items-center justify-between py-4 my-[45px]">
       <div className="text-2xl font-bold flex items-center space-x-2">
-        <span className="text-black">N</span>
-        <span>ZIMA NEWS</span>
+        <img src="/assets/ZIMO NEWS.svg" alt="Zimo News" />
       </div>
-      <nav className="hidden md:flex space-x-6 text-gray-600">
+      <nav className="hidden md:flex space-x-6 text-[14px] tracking-[2px]">
         <a href="#" className="hover:text-black">
           ISRAEL/GAZA
         </a>
@@ -31,10 +30,7 @@ function Navbar() {
         </a>
       </nav>
       <div className="flex items-center space-x-4">
-        {/* <Globe className="w-6 h-6" /> */}
-        <button className="md:hidden">
-          {/* <Menu className="w-6 h-6" /> */}
-        </button>
+        <img src="/assets/UK Flag.svg" alt="Uk Flag" />
       </div>
     </header>
   );
