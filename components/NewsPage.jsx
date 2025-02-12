@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "./header/Navbar";
-import LiveUpdate from "./news-section/LiveUpdate";
-import NewsSection from "./news-section/NewsSection";
+import LiveUpdate from "./hero-section/LiveUpdate";
+import NewsSection from "./main-section/MainSection";
 
 export default function NewsPage() {
   return (

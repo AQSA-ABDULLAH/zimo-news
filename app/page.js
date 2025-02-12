@@ -1,6 +1,6 @@
 "use client";
-import NewsPage from "@/components/news-section/NewsPage";
-import ToggleButton from "@/components/news-section/ToggleButton";
+import NewsPage from "@/components/NewsPage";
+import ToggleButton from "@/components/hero-section/ToggleButton";
 import Image from "next/image";
 
 export default function Home() {
