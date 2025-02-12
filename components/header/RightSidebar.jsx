@@ -27,16 +27,16 @@ function RightSidebar({ isOpen, toggleSidebar }) {
       }`}
     >
       {/* Sidebar Content */}
-      <div className="p-6">
-        <h2 className="text-white text-lg font-bold mb-4">MORE</h2>
-        <ul className="space-y-2">
-          <li className="hover:text-gray-400 cursor-pointer">CLIMATE CRISIS</li>
-          <li className="hover:text-gray-400 cursor-pointer">OPINION</li>
-          <li className="hover:text-gray-400 cursor-pointer">CORONAVIRUS</li>
-          <li className="hover:text-gray-400 cursor-pointer">INVESTIGATIONS</li>
-          <li className="hover:text-gray-400 cursor-pointer">IN PICTURES</li>
-          <li className="hover:text-gray-400 cursor-pointer">INTERACTIVES</li>
-          <li className="hover:text-gray-400 cursor-pointer">PODCASTS</li>
+      <div className="p-[20px]">
+        <h2 className="text-[36px] mb-[9px]">MORE</h2>
+        <ul className="space-y-[20px] text-[14px]">
+          <li className="cursor-pointer">CLIMATE CRISIS</li>
+          <li className="cursor-pointer">OPINION</li>
+          <li className="cursor-pointer">CORONAVIRUS</li>
+          <li className="cursor-pointer">INVESTIGATIONS</li>
+          <li className="cursor-pointer">IN PICTURES</li>
+          <li className="cursor-pointer">INTERACTIVES</li>
+          <li className="cursor-pointer">PODCASTS</li>
         </ul>
       </div>
     </div>

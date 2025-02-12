@@ -27,16 +27,16 @@ function LeftSidebar({ isOpen, toggleSidebar }) {
       }`}
     >
       {/* Sidebar Content */}
-      <div className="p-6">
-        <h2 className="text-blue-400 text-lg font-bold mb-4">NEWS</h2>
-        <ul className="space-y-2">
-          <li className="hover:text-blue-400 cursor-pointer">EUROPE</li>
-          <li className="hover:text-blue-400 cursor-pointer">US/CANADA</li>
-          <li className="hover:text-blue-400 cursor-pointer">MIDDLE EAST</li>
-          <li className="hover:text-blue-400 cursor-pointer">AFRICA</li>
-          <li className="hover:text-blue-400 cursor-pointer">ASIA</li>
-          <li className="hover:text-blue-400 cursor-pointer">LATIN AMERICA</li>
-          <li className="hover:text-blue-400 cursor-pointer">ASIA PACIFIC</li>
+      <div className="p-[20px]">
+        <h2 className="text-[36px] mb-[9px]">NEWS</h2>
+        <ul className="space-y-[18px] text-[14px]">
+          <li className="cursor-pointer">EUROPE</li>
+          <li className="cursor-pointer">US/CANADA</li>
+          <li className="cursor-pointer">MIDDLE EAST</li>
+          <li className="cursor-pointer">AFRICA</li>
+          <li className="cursor-pointer">ASIA</li>
+          <li className="cursor-pointer">LATIN AMERICA</li>
+          <li className="cursor-pointer">ASIA PACIFIC</li>
         </ul>
       </div>
     </div>
