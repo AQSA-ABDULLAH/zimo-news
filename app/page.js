@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
+    <div className="max-h-[100vh]">
       <NewsPage />
-      <div className="absolute top-0 w-screen">
+      <div className="absolute top-0 w-[100%]">
         <ToggleButton />
       </div>
-    </>
+    </div>
   );
 }
