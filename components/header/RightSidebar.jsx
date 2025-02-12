@@ -22,7 +22,7 @@ function RightSidebar({ isOpen, toggleSidebar }) {
   return (
     <div
       ref={sidebarRef}
-      className={`fixed top-0 right-0 h-[370px] w-[328px] bg-black text-white transition-transform duration-300 ${
+      className={`fixed top-0 right-0 h-[370px] w-[328px] bg-black text-white tracking-[2.5px] transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-[328px]"
       }`}
     >

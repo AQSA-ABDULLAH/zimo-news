@@ -7,7 +7,7 @@ function NewsSection() {
         <img src="/assets/Group 6475.svg" alt="logo" />
         <h2 className="font-bold">MOST READ</h2>
       </div>
-      <ul className="mt-[20px] space-y-[20px] text-[14px] tracking-[2.8px]">
+      <ul className="mt-[22px] space-y-[18px] text-[14px] tracking-[2.8px] uppercase leading-5">
   <li>
     UN says 700,000 children displaced in Gaza amid deadly Israeli attacks
   </li>
