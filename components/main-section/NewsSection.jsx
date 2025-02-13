@@ -16,7 +16,7 @@ function NewsSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNews((prevNews) => [...prevNews.slice(1), prevNews[0]]);
+      setNews((prevNews) => [prevNews[prevNews.length - 1], ...prevNews.slice(0, -1)]);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -33,7 +33,7 @@ function NewsSection() {
           className="space-y-[9px] 3xl:space-y-[18px] text-[10px] 3xl:text-[14px] tracking-[2px] 3xl:tracking-[2.8px] uppercase 3xl:leading-5"
         >
           {news.map((item, index) => (
-            <li key={index} className="transition-transform duration-500">
+            <li key={index} className="transition-transform duration-100">
               {item}
             </li>
           ))}
@@ -44,4 +44,5 @@ function NewsSection() {
 }
 
 export default NewsSection;
+
 
