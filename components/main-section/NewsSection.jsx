@@ -2,22 +2,32 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
-  const [news, setNews] = useState([
-    "UN says 700,000 children displaced in Gaza amid deadly Israeli attacks",
-    "Russia and US air strikes attack targets in Syria",
-    "Israel-Hamas war updates: Palestinians killed in Israeli attack on Jabalia",
-    "Indonesians boycott McDonald's, Starbucks over support for Israel",
-    "UK’s Braverman sacked following pro-Palestinian protest comments",
-    "Anti-Palestinian sentiment rises amid bipartisan US support for Israel",
-    "What does David Cameron’s return to UK politics mean for the Middle East?",
-    "Russia-Ukraine war: List of key events, Day 629",
-    "If Gaza was in your city, how much would be destroyed?",
-  ]);
+   const [news, setNews] = useState([]);
+    const API_KEY = "fdb878ca7e9541eebc77716c73c3bd45"; // Replace with your API key
+    const NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=${API_KEY}`;
+  
+    useEffect(() => {
+      const fetchNews = async () => {
+        try {
+          const response = await fetch(NEWS_API_URL);
+          const data = await response.json();
+          if (data.articles) {
+            setNews(data.articles.map((article) => article.title));
+          }
+        } catch (error) {
+          console.error("Error fetching news:", error);
+        }
+      };
+  
+      fetchNews();
+      const interval = setInterval(fetchNews, 60000); // Refresh news every minute
+      return () => clearInterval(interval);
+    }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setNews((prevNews) => [prevNews[prevNews.length - 1], ...prevNews.slice(0, -1)]);
-    }, 2000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -27,18 +37,18 @@ function NewsSection() {
         <img src="/assets/Group 6475.svg" alt="logo" className="max-3xl:h-8" />
         <h2 className="font-bold">MOST READ</h2>
       </div>
-      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px]"> 
+      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px] h-[320px] 3xl:h-[572px]"> 
         <AnimatePresence mode="popLayout">
           <motion.ul
             key={news[0]} // Re-renders on change
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "100%", opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 3, ease: "easeInOut" }}
             className="space-y-[9px] 3xl:space-y-[18px] text-[10px] 3xl:text-[14px] tracking-[2px] 3xl:tracking-[2.8px] uppercase 3xl:leading-5"
           >
             {news.map((item, index) => (
-              <motion.li key={index} className="transition-transform duration-100">
+              <motion.li key={index} className="transition-transform duration-300">
                 {item}
               </motion.li>
             ))}
@@ -50,5 +60,3 @@ function NewsSection() {
 }
 
 export default NewsSection;
-
-
