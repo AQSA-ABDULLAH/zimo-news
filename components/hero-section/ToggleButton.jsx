@@ -4,8 +4,7 @@ import RightSidebar from "../header/RightSidebar";
 import Logo from "./Logo";
 
 function ToggleButton() {
-  const [isLeftOpen, setIsLeftOpen] = useState(false);
-  const [isRightOpen, setIsRightOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const [showLogoLeft, setShowLogoLeft] = useState(true);
   const [showLogoRight, setShowLogoRight] = useState(true);
 
@@ -23,7 +22,7 @@ function ToggleButton() {
       {/* LEFT SIDEBAR BUTTON */}
       <div
         className="bg-black w-[42px] 3xl:w-[50px] h-[150px] 3xl:h-[213px] flex items-center justify-center rounded-br-3xl cursor-pointer"
-        onClick={() => setIsLeftOpen(!isLeftOpen)}
+        onClick={() => setOpen(!isOpen)}
       >
         {showLogoLeft ? (
           <div className="rotate-90 transition-opacity duration-500">
@@ -39,7 +38,7 @@ function ToggleButton() {
       {/* RIGHT SIDEBAR BUTTON */}
       <div
         className="bg-black w-[42px] 3xl:w-[50px] h-[150px] 3xl:h-[213px] flex items-center justify-center rounded-bl-3xl cursor-pointer"
-        onClick={() => setIsRightOpen(!isRightOpen)}
+        onClick={() => setOpen(!isOpen)}
       >
         {showLogoRight ? (
           <div className="rotate-90 transition-opacity duration-500">
@@ -53,8 +52,8 @@ function ToggleButton() {
       </div>
 
       {/* Render Sidebars */}
-      <LeftSidebar isOpen={isLeftOpen} toggleSidebar={() => setIsLeftOpen(false)} />
-      <RightSidebar isOpen={isRightOpen} toggleSidebar={() => setIsRightOpen(false)} />
+      <LeftSidebar isOpen={isOpen} toggleSidebar={() => setOpen(false)} />
+      <RightSidebar isOpen={isOpen} toggleSidebar={() => setOpen(false)} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
-  const listRef = useRef(null);
   const [news, setNews] = useState([
     "UN says 700,000 children displaced in Gaza amid deadly Israeli attacks",
     "Russia and US air strikes attack targets in Syria",
@@ -27,17 +27,23 @@ function NewsSection() {
         <img src="/assets/Group 6475.svg" alt="logo" className="max-3xl:h-8" />
         <h2 className="font-bold">MOST READ</h2>
       </div>
-      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px]">
-        <ul
-          ref={listRef}
-          className="space-y-[9px] 3xl:space-y-[18px] text-[10px] 3xl:text-[14px] tracking-[2px] 3xl:tracking-[2.8px] uppercase 3xl:leading-5"
-        >
-          {news.map((item, index) => (
-            <li key={index} className="transition-transform duration-100">
-              {item}
-            </li>
-          ))}
-        </ul>
+      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px]"> 
+        <AnimatePresence mode="popLayout">
+          <motion.ul
+            key={news[0]} // Re-renders on change
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
+            exit={{ y: "100%", opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="space-y-[9px] 3xl:space-y-[18px] text-[10px] 3xl:text-[14px] tracking-[2px] 3xl:tracking-[2.8px] uppercase 3xl:leading-5"
+          >
+            {news.map((item, index) => (
+              <motion.li key={index} className="transition-transform duration-100">
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </AnimatePresence>
       </div>
     </div>
   );
