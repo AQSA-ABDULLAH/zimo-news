@@ -17,7 +17,7 @@ function NewsSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setNews((prevNews) => [prevNews[prevNews.length - 1], ...prevNews.slice(0, -1)]);
-    }, 30);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
