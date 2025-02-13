@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
    const [news, setNews] = useState([]);
-    const API_KEY = "fdb878ca7e9541eebc77716c73c3bd45"; // Replace with your API key
+    const API_KEY = "fdb878ca7e9541eebc77716c73c3bd45";
     const NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=${API_KEY}`;
   
     useEffect(() => {
