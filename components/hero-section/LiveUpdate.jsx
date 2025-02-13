@@ -2,7 +2,7 @@ import React from "react";
 
 function LiveUpdate() {
   return (
-    <div className="bg-[#000] py-4 flex tracking-[2.4px] my-[45px]">
+    <div className="bg-[#000] py-4 flex tracking-[2.4px] my-[35px] 3xl:my-[45px]">
       <span className="w-[25%] flex items-center justify-center">
         <img src="/assets/LiveUpdate.svg" alt="notification" className="w-[150px]" />
       </span>200

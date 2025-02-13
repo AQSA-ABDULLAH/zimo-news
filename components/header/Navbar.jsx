@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <header className="flex items-center justify-between py-4 my-[45px]">
+    <header className="flex items-center justify-between my-[35px] 3xl:my-[45px]">
       <div>
         <img src="/assets/ZIMO NEWS.svg" alt="Zimo News" className="max-3xl:h-8" />
       </div>
