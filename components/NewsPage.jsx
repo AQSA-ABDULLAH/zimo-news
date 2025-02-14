@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Navbar from "./header/Navbar";
 import LiveUpdate from "./hero-section/LiveUpdate";
 import NewsSection from "./main-section/MainSection";
