@@ -2,27 +2,27 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
-   const [news, setNews] = useState([]);
-    const API_KEY = "qBXDWe0LDCXqszo5FWe22HHOSD0Y3FA9BiuBchZr"; // Replace with your actual API key
-    const NEWS_API_URL = `https://api.thenewsapi.com/v1/news/top?api_token=${API_KEY}&locale=us&language=en`;
-  
-    useEffect(() => {
-      const fetchNews = async () => {
-        try {
-          const response = await fetch(NEWS_API_URL);
-          const data = await response.json();
-          if (data.articles) {
-            setNews(data.articles.map((article) => article.title));
-          }
-        } catch (error) {
-          console.error("Error fetching news:", error);
+  const [news, setNews] = useState([]);
+  const API_KEY = "8811994adfcf4746a2074823b25c7e1e"; // Replace with your actual API key
+  const NEWS_API_URL = `https://api.worldnewsapi.com/search-news?api-key=${API_KEY}&number=10&language=en`;
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch(NEWS_API_URL);
+        const data = await response.json();
+        if (data.news) {
+          setNews(data.news.map((article) => article.title));
         }
-      };
-  
-      fetchNews();
-      const interval = setInterval(fetchNews, 60000); // Refresh news every minute
-      return () => clearInterval(interval);
-    }, []);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+
+    fetchNews();
+    const interval = setInterval(fetchNews, 60000); // Refresh news every minute
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
