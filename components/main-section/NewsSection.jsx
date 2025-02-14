@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
   const [news, setNews] = useState([]);
-  const API_KEY = "8811994adfcf4746a2074823b25c7e1e"; // Replace with your actual API key
-  const NEWS_API_URL = `https://api.worldnewsapi.com/search-news?api-key=${API_KEY}&number=10&language=en`;
+  const API_KEY = "pub_69457197b9f174b03a2f58af4445686e2936d"; // Replace with your actual API key
+  const NEWS_API_URL = `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=us&language=en&category=top`;
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const response = await fetch(NEWS_API_URL);
         const data = await response.json();
-        if (data.news) {
-          setNews(data.news.map((article) => article.title));
+        if (data.results) {
+          setNews(data.results.map((article) => article.title));
         }
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -30,6 +30,7 @@ function NewsSection() {
     }, 7000);
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <div className="p-[20px] overflow-hidden">
