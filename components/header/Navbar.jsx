@@ -7,25 +7,25 @@ function Navbar() {
         <img src="/assets/ZIMO NEWS.svg" alt="Zimo News" className="max-3xl:h-8" />
       </div>
       <nav className="hidden md:flex space-x-[15px] text-[10px] 3xl:text-[14px] tracking-[2px]">
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           ISRAEL/GAZA
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           UKRAINE WAR
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           FEATURES
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           ECONOMY
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           VIDEO
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           SPORT
         </a>
-        <a href="#" className="hover:text-black">
+        <a href="#" className="hover:text-black cursor-pointer">
           SCIENCE & TECHNOLOGY
         </a>
       </nav>

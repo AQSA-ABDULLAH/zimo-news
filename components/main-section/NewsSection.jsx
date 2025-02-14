@@ -2,27 +2,27 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NewsSection() {
-   const [news, setNews] = useState([]);
-    const API_KEY = "fdb878ca7e9541eebc77716c73c3bd45";
-    const NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=${API_KEY}`;
-  
-    useEffect(() => {
-      const fetchNews = async () => {
-        try {
-          const response = await fetch(NEWS_API_URL);
-          const data = await response.json();
-          if (data.articles) {
-            setNews(data.articles.map((article) => article.title));
-          }
-        } catch (error) {
-          console.error("Error fetching news:", error);
+  const [news, setNews] = useState([]);
+  const API_KEY = "qBXDWe0LDCXqszo5FWe22HHOSD0Y3FA9BiuBchZr"; // Replace with your actual API key
+  const NEWS_API_URL = `https://api.thenewsapi.com/v1/news/top?api_token=${API_KEY}&locale=us&language=en`;
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch(NEWS_API_URL);
+        const data = await response.json();
+        if (data.data) {
+          setNews(data.data.map((article) => article.title));
         }
-      };
-  
-      fetchNews();
-      const interval = setInterval(fetchNews, 60000); // Refresh news every minute
-      return () => clearInterval(interval);
-    }, []);
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+
+    fetchNews();
+    const interval = setInterval(fetchNews, 60000); // Refresh news every minute
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +37,7 @@ function NewsSection() {
         <img src="/assets/Group 6475.svg" alt="logo" className="max-3xl:h-8" />
         <h2 className="font-bold">MOST READ</h2>
       </div>
-      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px] h-[320px] 3xl:h-[572px]"> 
+      <div className="relative overflow-hidden mt-[12px] 3xl:mt-[22px] h-[320px] 3xl:h-[468px]">
         <AnimatePresence mode="popLayout">
           <motion.ul
             key={news[0]} // Re-renders on change
