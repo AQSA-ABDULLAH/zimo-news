@@ -12,7 +12,7 @@ function LiveUpdate() {
       </span>
 
       <div className="text-[8px] lg:text-[10px] 3xl:text-[14px] px-2 text-white xl:w-[75%]">
-        <span className="font-bold leading-[18px] lg:leading-[10px] 3xl:leading-[30px]">
+        <span className="font-bold leading-[0px] lg:leading-[10px] 3xl:leading-[30px] pb-[4px]">
           UN SAYS 700,000 CHILDREN DISPLACED IN GAZA AMID DEADLY ISRAEL ATTACKS
         </span>
         <p className="leading-0 3xl:leading-5">

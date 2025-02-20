@@ -6,7 +6,7 @@ import NewsSection from "./main-section/MainSection";
 export default function NewsPage() {
   return (
     <div className="font-lato">
-      <main className="w-[63%] mx-auto">
+      <main className="sm:w-[63%] mx-[50px] sm:mx-auto">
         <Navbar />
         <LiveUpdate />
         <NewsSection />
