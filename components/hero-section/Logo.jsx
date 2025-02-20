@@ -1,6 +1,6 @@
 import React from "react";
 
-function Logo({currentMedia, size = "w-[88px] desktop:w-[147px]" }) {
+function Logo({currentMedia, size = "w-[50px] md:w-[88px] desktop:w-[147px]" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -26,10 +26,10 @@ function ToggleButton() {
       >
         {showLogoLeft ? (
           <div className="rotate-90 transition-opacity duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <Logo className="max-3xl:h-3" />
+            <Logo className="" />
           </div>
         ) : (
-          <div className="text-[14px] sm:text-[22px] 3xl:text-[32px] 3xl:font-semibold text-white -rotate-90 tracking-[5px] 3xl:tracking-[7px] transition-opacity duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="text-[14px] sm:text-[22px] 3xl:text-[32px] 3xl:font-semibold text-white -rotate-90 tracking-[3px] md:tracking-[5px] 3xl:tracking-[7px] transition-opacity duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             NEWS
           </div>
         )}
@@ -45,7 +45,7 @@ function ToggleButton() {
             <Logo />
           </div>
         ) : (
-          <div className="text-[14px] sm:text-[22px] 3xl:text-[32px] 3xl:font-semibold text-white -rotate-90 tracking-[5px] 3xl:tracking-[6px] transition-opacity duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="text-[14px] sm:text-[22px] 3xl:text-[32px] 3xl:font-semibold text-white -rotate-90 tracking-[3px] md:tracking-[5px] 3xl:tracking-[6px] transition-opacity duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             MORE
           </div>
         )}
