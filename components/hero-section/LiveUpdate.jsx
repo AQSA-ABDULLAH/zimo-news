@@ -8,7 +8,7 @@ function LiveUpdate() {
           src="/assets/Path 36294.svg"
           alt="notification"
         />
-        <p className="text-[#990000] text-[24px] lg:text-[15px] 3xl:text-[21px] 3xl:tracking-[7px]">LIVE UPDATE</p>
+        <p className="text-[#990000] text-[15px] sm:text-[24px] lg:text-[15px] 3xl:text-[21px] 3xl:tracking-[7px]">LIVE UPDATE</p>
       </span>
 
       <div className="text-[8px] lg:text-[10px] 3xl:text-[14px] px-2 text-white xl:w-[75%]">
