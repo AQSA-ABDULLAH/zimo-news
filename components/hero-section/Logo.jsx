@@ -40,16 +40,3 @@ function Logo({currentMedia, size = "w-[88px] desktop:w-[147px]" }) {
 }
 
 export default Logo;
-
-
-
-
-
-
-
-
-
-
-
-
-

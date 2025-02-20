@@ -10,7 +10,7 @@ function Navbar() {
           className="max-3xl:h-8"
         />
       </div>
-      <nav className="hidden md:flex space-x-[15px] text-[10px] 3xl:text-[14px] tracking-[2px]">
+      <nav className="hidden xl:flex space-x-[15px] text-[10px] 3xl:text-[14px] tracking-[2px]">
         <a href="/israel-gaza" className="hover:text-black cursor-pointer">
           ISRAEL/GAZA
         </a>
